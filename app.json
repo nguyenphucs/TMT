@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/form-submit/form",
+    "pages/form-submit2/event",
+    "pages/form-update/update"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Time Management ToolKit",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3370FF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/form-submit/form",
+        "iconPath": "images/task-black.svg",
+        "selectedIconPath": "images/tasks-blue.svg",
+        "text": "\t   Tạo công việc"
+      },
+      {
+        "pagePath": "pages/form-submit2/event",
+        "iconPath": "images/event-black.svg",
+        "selectedIconPath": "images/event-blue.svg",
+        "text": "\t   Mời sự kiện"
+      },
+      {
+        "pagePath": "pages/form-update/update",
+        "iconPath": "images/user-edit-black.svg",
+        "selectedIconPath": "images/user-edit-solid.svg",
+        "text": "\t   Cập nhật công việc"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/chart-line-solid.png",
+        "selectedIconPath": "images/chart.svg",
+        "text": "\t   Thống kê hằng tuần"
+      }
+    ]
+  },
+  "ext": {
+    "defaultPages": {
+      "sidebarMode": "pages/index/index",
+      "PCMode": "pages/form-submit/form"
+    }
+  },
+  "newFramework": {
+    "enabled": true,
+    "minimumSupportedVersion": "6.7"
+  }
+}

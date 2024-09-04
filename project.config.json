@@ -1,0 +1,16 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appid": "cli_a63b33ae6ef8d010",
+  "projectname": "app-calendar",
+  "ext": {
+    "defaultPages": {
+      "PCMode": "pages/index/index"
+    }
+  }
+}

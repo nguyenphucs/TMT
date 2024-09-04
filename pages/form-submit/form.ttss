@@ -1,0 +1,290 @@
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css';
+
+.page-task-form{
+max-width: 700px;
+height: auto;
+margin: 0 auto;
+padding-bottom: 100px;
+}
+
+.body{
+  padding-top:10px;
+  padding-left: 35px;
+  padding-right: 35px;  
+}
+
+.form-1 {
+  max-width: 1150px;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 15px; 
+  background-size: cover;
+}
+
+.main{
+  padding:0 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  font-weight: 600;
+  color: black;
+  font-size: 20px;
+  color: #045A97;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-info {
+  font-size: 15px;
+}
+.f-icon{
+  height:14px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.section-user {
+  align-self: flex-end; 
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+.task-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; 
+  margin-top: 10px;
+}
+.component{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section-user {
+  align-items: center; 
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: right;
+}
+.select-time{
+  border: #f1f1f1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-field{
+  justify-content: space-between;
+  display: block !important;
+  flex-direction: column;
+  /* margin: 50px; */
+}
+
+.input-text{
+  width: 100%;
+  background-color: rgb(255, 255, 255,0.8);
+  padding: 5px;
+}
+
+
+.input-text1{
+  width: 100%;
+  background-color: rgb(255, 255, 255,0.8);
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 113px;
+  padding: 10px 0;
+  /* box-sizing: border-box; */
+  border-radius: 5px;
+  resize: none;
+  border: 1px solid rgb(231, 230, 230); /* Đặt màu và độ rộng của border */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.picker-text{
+  height: 40px;
+  line-height: 35px;
+  background-color: rgb(255, 255, 255,0.8);
+  border-radius: 6px;
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  border: 1px solid rgb(231, 230, 230); /* Đặt màu và độ rộng của border */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.picker-lock{
+  height: 40px;
+  line-height: 35px;
+  background-color: rgb(255, 255, 255,0.8);
+  border-radius: 6px;
+  padding: 0;
+  margin-bottom: 5px;z
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  border: 1px solid rgb(231, 230, 230); /* Đặt màu và độ rộng của border */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+
+.picker-date{
+  height:40px; 
+  line-height: 35px;
+  background-color: rgb(255, 255, 255,0.8);
+  border-radius: 6px;
+  font-size: 15px;
+  min-width:auto;
+  text-align: center;  
+  border: 1px solid rgb(231, 230, 230); /* Đặt màu và độ rộng của border */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.picker-time{
+  height: 40px;
+  line-height: 35px;
+  background-color: rgb(255, 255, 255,0.8);
+  border-radius: 6px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  border: 1px solid rgb(231, 230, 230); /* Đặt màu và độ rộng của border */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.title1{
+  font-size: 15px ;
+  padding-bottom: 4px;
+}
+.title-loop{
+  font-size: 15px ;
+  padding-bottom: 0 !important;
+  margin-top: 7px;
+}
+
+button{
+  padding: 10px 20px !important;
+  font-size: 15px !important;
+  background: #045A97 !important;
+  border-radius: 6px !important;
+  border: none !important;
+  outline: none !important;
+}
+
+
+.btn:hover{
+  opacity: 0.8 !important;
+  cursor:pointer;
+  position:relative; 
+  border: none !important;
+  outline: none !important;
+}
+
+.btn{
+  padding: none !important;
+}
+
+.note-info{
+  /* background-color: ; */
+  display: block;
+}
+
+
+.component-picker-time{
+  display: flex ;
+  margin-top: 7px;
+}
+.content-pick{
+  /* display: flex; */
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.box-time{
+  display: flex ;
+  flex-direction: row ;
+}
+
+.row{
+  /* margin-top: 15px; */
+}
+
+.box-time picker { 
+  flex: 1;
+}
+
+.cb-l-w{
+  height: 15px; 
+  width: 15px; 
+  transform: scale(1.3);
+}
+.cb-l-d{
+  margin-left: 38px;
+  height: 15px; 
+  width: 15px; 
+  transform: scale(1.3);
+}
+.page-body-info {
+  padding-bottom: 0;
+  height: 260px;
+}
+
+.notes {
+  color: grey; 
+  font-size: 15px;
+}
+
+.ip{
+  color: red;
+  /* font-weight: 600; */
+}
+
+.input{
+  margin-bottom: 5px !important;
+}
+
+.checkbox-loop{
+  display: flex;
+  margin-top:5px;
+  margin-left: -10px;
+}
+.name-checkbox-loop{
+  display: flex;
+  margin-top:5px;
+}
+
+.section-2{
+  margin-top: 10px;
+}
+
+.customStartTime-pickerContainer {
+  display: flex;
+  justify-content: space-between; /* Đặt khoảng cách giữa các picker */
+  align-items: center;
+}
+
+.customStartTime-picker {
+  height: 40px;
+  line-height: 35px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  font-size: 15px;
+  width: 48%; /* Điều chỉnh chiều rộng để vừa trên một dòng */
+  text-align: center;
+  border: 1px solid rgb(231, 230, 230);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}

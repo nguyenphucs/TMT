@@ -1,0 +1,156 @@
+<view class="container">
+  <view class="row">
+    <view class="col-6">
+      <view class="dash-board">
+        <view class="text-list">
+          <text class="d-flex justify-content-center header">Tiêu chuẩn kiến nghị</text>
+          <view class="container text-center">
+            <view class="row align-items-start row-end">
+              <view class="col detail">
+                <view class="row-detail">
+                  <text class="row-title">Độ quan trọng</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail">A: {{percentA}}%</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail">B: {{percentB}}%</text>
+                </view>
+                <view class="last-row">
+                  <text class="text-detail">C: {{percentC}}%</text>
+                </view>
+              </view>
+              <view class="col detail">
+                <view class="row-detail">
+                  <text class="row-title">Tiêu chuẩn</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail" decode>A: &gt; 65%</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail" decode>B: &lt; 30%</text>
+                </view>
+                <view class="last-row">
+                  <text class="text-detail">C: 5-10%</text>
+                </view>
+              </view>
+              <view class="col detail">
+                <view class="row-detail">
+                  <text class="row-title">Nhận định</text>
+                </view>
+                <view class="row-detail">
+                  <text class="{{assessmentA === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessmentA}}</text>
+                </view>
+                <view class="row-detail">
+                  <text class="{{assessmentB === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessmentB}}</text>
+                </view>
+                <view class="last-row">
+                  <text class="{{assessmentC === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessmentC}}</text>
+                </view>
+              </view>
+            </view>
+
+            <view class="row align-items-start row-end">
+              <view class="col detail">
+                <view class="row-detail">
+                  <text class="row-title">Độ cấp bách</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail">1: {{percent1}}%</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail">2: {{percent2}}%</text>
+                </view>
+                <view class="last-row">
+                  <text class="text-detail">3: {{percent3}}%</text>
+                </view>
+              </view>
+              <view class="col detail">
+                <view class="row-detail">
+                  <text class="row-title">Tiêu chuẩn</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail" decode>1: &lt; 30%</text>
+                </view>
+                <view class="row-detail">
+                  <text class="text-detail" decode>2: &gt; 65%</text>
+                </view>
+                <view class="last-row">
+                  <text class="text-detail">3: 5-10%</text>
+                </view>
+              </view>
+              <view class="col">
+                <view class="row-detail">
+                  <text class="row-title">Nhận định</text>
+                </view>
+                <view class="row-detail">
+                  <text class="{{assessment1 === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessment1}}</text>
+                </view>
+                <view class="row-detail">
+                  <text class="{{assessment2 === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessment2}}</text>
+                </view>
+                <view class="last-row">
+                  <text class="{{assessment3 === 'Tốt' ? 'tot' : 'chuatot'}}" style="font-size: 15px;">{{assessment3}}</text>
+                </view>
+              </view>
+            </view>
+
+            <view class="row align-items-start">
+              <view class="col-6 standard">
+                <text class="text-detail">Giờ làm quy chuẩn trong tuần: </text>
+              </view>
+              <view class="col-6">
+                <input id="hours" type="number" bindinput="onChangeHoursWeek" value="{{totalHoursInWeek}}" placeholder="Nhập số giờ thực tế" min="1" class="input" />
+              </view>
+            </view>
+            <view class="row align-items-start row-end-top">
+              <view class="col-6 standard1">
+                <text class="text-detail-distance">Giờ làm trong tuần: {{totalHours}}</text>
+                <!-- Điều kiện để hiển thị số giờ thiếu hoặc dư -->
+                <text class="text-detail-distance1" decode>
+                  <block wx:if="{{distance >= 0}}">
+                    Thiếu: {{distance || 0}} giờ
+                  </block>
+                  <block wx:else>
+                    Dư: {{-distance || 0}} giờ
+                  </block>
+                </text>
+              </view>
+              <view class="col-6 standard2">
+                <p>Nhận định:</p>
+                <text class="{{percentdistanceClass}}" style="font-size: 15px;"> {{percentdistance}}</text>
+                <!-- Điều kiện để hiển thị số giờ thiếu hoặc dư -->
+                <text class="text-detail-distance" decode>
+                  <block wx:if="{{distance >= 0}}">
+                    (Tiêu chuẩn: &lt; 10%)
+                  </block>
+                  <block wx:else> </block>
+                </text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="col-6">
+      <view class="dash-board">
+        <text class="dashboard-header">Các loại công việc</text>
+        <chart canvas-id="bar" spec="{{ spec4 }}" styles="{{ styles }}" />
+      </view>
+    </view>
+  </view>
+  <view class="row">
+    <view class="col-6">
+      <view class="dash-board">
+        <text class="dashboard-header">% Số giờ độ quan trọng</text>
+        <chart canvas-id="iiii" spec="{{ spec2 }}" styles="{{ styles }}" />
+      </view>
+    </view>
+    <view class="col-6">
+      <view class="dash-board">
+        <text class="dashboard-header">% Số giờ độ cấp bách</text>
+        <chart canvas-id="pie" spec="{{ spec3 }}" styles="{{ styles }}" />
+      </view>
+    </view>
+  </view>
+</view>
